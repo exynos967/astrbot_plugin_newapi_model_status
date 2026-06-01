@@ -64,3 +64,5 @@ AstrBot 插件：查看并发送 `new_api_tools` 提供的模型健康度图卡�
   - `discord`
   - `tesla`
 - 还支持 `follow_remote`：跟随远端 `new_api_tools` 后台当前主题
+
+[new_api_tools](https://github.com/james-6-23/new_api_tools)
