@@ -3,7 +3,7 @@ display_name: NewAPI 模型健康度
 desc: new_api_tools 的公开 embed 接口，生成并发送模型健康度图卡。
 version: v0.1.0
 author: 薄暝
-repo: "https://github.com/exynos967/astrbot_plugin_newapi_model_status"
+repo: https://github.com/exynos967/astrbot_plugin_newapi_model_status
 support_platforms:
   - aiocqhttp
 astrbot_version: ">=4.18,<5"
