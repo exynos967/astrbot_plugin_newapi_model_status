@@ -1,0 +1,85 @@
+{
+  "new_api_base_url": {
+    "type": "string",
+    "description": "new_api_tools 根地址",
+    "hint": "例如 http://127.0.0.1:3000 或 https://newapi.example.com 。插件会自动拼接公开 embed 路由。"
+  },
+  "request_timeout_seconds": {
+    "type": "float",
+    "description": "请求超时时间（秒）",
+    "default": 10.0,
+    "hint": "建议 5~20 秒。"
+  },
+  "verify_ssl": {
+    "type": "bool",
+    "description": "是否校验证书",
+    "default": true,
+    "hint": "如使用自签名证书，可临时关闭。"
+  },
+  "image_theme": {
+    "type": "string",
+    "description": "生成图片时使用的主题",
+    "default": "follow_remote",
+    "options": [
+      "follow_remote",
+      "daylight",
+      "obsidian",
+      "minimal",
+      "neon",
+      "forest",
+      "ocean",
+      "terminal",
+      "cupertino",
+      "material",
+      "openai",
+      "anthropic",
+      "vercel",
+      "linear",
+      "stripe",
+      "github",
+      "discord",
+      "tesla"
+    ],
+    "hint": "follow_remote 表示跟随 new_api_tools 远端保存的主题；也可以固定为某个主题。手动命令还支持 /模型情况 <theme_id> 临时覆盖。"
+  },
+  "push_enabled": {
+    "type": "bool",
+    "description": "是否启用定时推送",
+    "default": false,
+    "hint": "修改后建议在 AstrBot 中重载插件。"
+  },
+  "push_interval_minutes": {
+    "type": "int",
+    "description": "定时推送间隔（分钟）",
+    "default": 60,
+    "hint": "当前支持 15 / 30 / 60 / 120 / 180 / 360 / 720 / 1440。"
+  },
+  "push_targets": {
+    "type": "template_list",
+    "description": "固定推送目标列表",
+    "hint": "直接填写 QQ 群号即可。管理员也可以在目标群执行 /模型情况会话，快速获取当前群号。",
+    "templates": {
+      "target": {
+        "name": "推送目标",
+        "hint": "每一项代表一个固定QQ群。",
+        "items": {
+          "name": {
+            "type": "string",
+            "description": "备注名",
+            "default": ""
+          },
+          "group_id": {
+            "type": "string",
+            "description": "目标 QQ 群号",
+            "default": ""
+          },
+          "enabled": {
+            "type": "bool",
+            "description": "是否启用",
+            "default": true
+          }
+        }
+      }
+    }
+  }
+}
